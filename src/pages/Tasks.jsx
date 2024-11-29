@@ -89,6 +89,7 @@ export default function Tasks() {
       setTasks(tasks.map((t) => (t._id === task._id ? response.data : t)));
       setEditingTask(null);
       toast.success("Task status updated successfully");
+fetchTasks();
     } catch (error) {
       toast.error("Error updating task status");
     }
